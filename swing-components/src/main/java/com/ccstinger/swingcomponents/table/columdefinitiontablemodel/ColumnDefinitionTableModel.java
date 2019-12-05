@@ -5,6 +5,19 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
+/**
+ * A concrete implementation of the AbstractTableModel that uses a ColumnDefinitionGroup to
+ * display rows of type T.
+ * 
+ * Note that this class is not thread safe, and assumes modifications of instances of this class
+ * will occur within the Swing thread.
+ * 
+ * @author HanTunca
+ * Dec 5, 2019
+ *
+ * @param <T> class that represents a row of data
+ * 
+ */
 @SuppressWarnings("serial")
 public class ColumnDefinitionTableModel<T> extends AbstractTableModel 
 {

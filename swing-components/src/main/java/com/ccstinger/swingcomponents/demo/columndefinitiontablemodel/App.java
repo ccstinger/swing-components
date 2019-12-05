@@ -17,6 +17,13 @@ import com.ccstinger.swingcomponents.table.columdefinitiontablemodel.ColumnDefin
 
 import static java.awt.GridBagConstraints.*;
 
+/**
+ * An application that shows how to setup a JTable based on a ColumnDefinitionGroup.
+ * 
+ * @author HanTunca
+ * Dec 5, 2019
+ *
+ */
 @SuppressWarnings("serial")
 public class App extends JPanel 
 {
@@ -53,10 +60,12 @@ public class App extends JPanel
 	{
 		List<TableRecord> modelData = new ArrayList<>();
 		
-		modelData.add(new TableRecord("Steve", "Jobs", "Cupertino, CA", new BigDecimal("5000000.0"), new BigDecimal("0.40")));
-		modelData.add(new TableRecord("Carl", "Sagan", "Camrbidge, MA", new BigDecimal("1000000.0"), new BigDecimal("0.25")));
-		modelData.add(new TableRecord("Simon", "LeBon", "Hertfordshire, England", new BigDecimal("500000"), new BigDecimal("0.14")));
-		modelData.add(new TableRecord("Alex", "Lifeson", "Fernie, BC, Canada", new BigDecimal("400000"), new BigDecimal("0.14")));
+		modelData.add(new TableRecord("Dorothy", "Vaughan", "Kansas City, MO", new BigDecimal("600000"), new BigDecimal("0.132"), true));
+		modelData.add(new TableRecord("Tyson", "Neil", "East Hampton, NY", new BigDecimal("300000"), new BigDecimal("0.23"), true));
+		modelData.add(new TableRecord("Steve", "Jobs", "Cupertino, CA", new BigDecimal("5000000.0"), new BigDecimal("0.40"), false));
+		modelData.add(new TableRecord("Carl", "Sagan", "Camrbidge, MA", new BigDecimal("1000000.0"), new BigDecimal("0.25"), false));
+		modelData.add(new TableRecord("Simon", "LeBon", "Hertfordshire, England", new BigDecimal("500000"), new BigDecimal("0.14"), true));
+		modelData.add(new TableRecord("Alex", "Lifeson", "Fernie, BC, Canada", new BigDecimal("400000"), new BigDecimal("0.14"), true));
 		
 		ColumnDefinitionTableModel<TableRecord> model = new ColumnDefinitionTableModel<>(ColumnConfigurator.getColumnDefinitionGroup(), modelData);
 		

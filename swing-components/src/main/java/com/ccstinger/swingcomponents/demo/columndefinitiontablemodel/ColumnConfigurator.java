@@ -7,6 +7,11 @@ import java.util.List;
 import com.ccstinger.swingcomponents.table.columdefinitiontablemodel.ColumnDefinition;
 import com.ccstinger.swingcomponents.table.columdefinitiontablemodel.ColumnDefinitionGroup;
 
+/**
+ * @author HanTunca
+ * Dec 5, 2019
+ *
+ */
 public class ColumnConfigurator 
 {
 	public static final String FIRST_NAME_COLUMN_IDENTIFIER   = "first name";
@@ -15,6 +20,7 @@ public class ColumnConfigurator
 	public static final String GROSS_SALARY_COLUMN_IDENTIFIER = "gross salary";
 	public static final String NET_SALARY_COLUMN_IDENTIFIER   = "net salary";
 	public static final String TAX_RATE_COLUMN_IDENTIFIER     = "tax rate";
+	public static final String ALIVE_COLUMN_IDENTIFIER        = "alive";
 	
 	private ColumnConfigurator()
 	{
@@ -28,6 +34,7 @@ public class ColumnConfigurator
 		columnDefinitions.add(new ColumnDefinition<>(FIRST_NAME_COLUMN_IDENTIFIER, TableRecord::getFirstName, String.class));
 		columnDefinitions.add(new ColumnDefinition<>(LAST_NAME_COLUMN_IDENTIFIER, TableRecord::getLastName, String.class));
 		columnDefinitions.add(new ColumnDefinition<>(ADDRESS_COLUMN_IDENTIFIER, TableRecord::getAddress, String.class));
+		columnDefinitions.add(new ColumnDefinition<>(ALIVE_COLUMN_IDENTIFIER, TableRecord::isAlive, Boolean.class));
 		columnDefinitions.add(new ColumnDefinition<>(GROSS_SALARY_COLUMN_IDENTIFIER, TableRecord::getGrossSalary, BigDecimal.class));
 		columnDefinitions.add(new ColumnDefinition<>(TAX_RATE_COLUMN_IDENTIFIER, TableRecord::getTaxRate, BigDecimal.class));
 

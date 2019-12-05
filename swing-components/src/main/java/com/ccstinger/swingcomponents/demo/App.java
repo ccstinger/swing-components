@@ -1,9 +1,10 @@
-package com.ccstinger.swingcomponents.demo.columndefinitiontablemodel;
+package com.ccstinger.swingcomponents.demo;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
 import com.ccstinger.swingcomponents.table.columdefinitiontablemodel.ColumnDefinitionTableModel;
+import com.ccstinger.swingcomponents.table.renderers.FormatTableCellRenderer;
 
 import static java.awt.GridBagConstraints.*;
 
@@ -44,6 +47,14 @@ public class App extends JPanel
 	{
 		table.setAutoCreateRowSorter(true);
 		
+		FormatTableCellRenderer dollarRenderer  = new FormatTableCellRenderer(DecimalFormat.getCurrencyInstance(), SwingConstants.RIGHT);
+		FormatTableCellRenderer percentRenderer = new FormatTableCellRenderer(DecimalFormat.getPercentInstance(), SwingConstants.RIGHT);
+		
+		table.getColumn(ColumnConfigurator.GROSS_SALARY_COLUMN_IDENTIFIER).setCellRenderer(dollarRenderer);
+		table.getColumn(ColumnConfigurator.NET_SALARY_COLUMN_IDENTIFIER).setCellRenderer(dollarRenderer);
+		table.getColumn(ColumnConfigurator.TAX_RATE_COLUMN_IDENTIFIER).setCellRenderer(percentRenderer);
+
+		// layout panel
 		GridBagConstraints c = new GridBagConstraints();
 		
 		c.gridheight = REMAINDER;

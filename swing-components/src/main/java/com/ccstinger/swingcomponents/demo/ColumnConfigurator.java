@@ -1,4 +1,4 @@
-package com.ccstinger.swingcomponents.demo.columndefinitiontablemodel;
+package com.ccstinger.swingcomponents.demo;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

@@ -17,6 +17,7 @@ import com.ccstinger.swingcomponents.table.columdefinitiontablemodel.ColumnDefin
 
 import static java.awt.GridBagConstraints.*;
 
+@SuppressWarnings("serial")
 public class App extends JPanel 
 {
 	private final ColumnDefinitionTableModel<TableRecord> model;

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
+@SuppressWarnings("serial")
 public class ColumnDefinitionTableModel<T> extends AbstractTableModel 
 {
 	private final ColumnDefinitionGroup<T> columnDefinitionGroup;

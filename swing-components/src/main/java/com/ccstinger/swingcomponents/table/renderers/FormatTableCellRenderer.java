@@ -7,6 +7,9 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
 /**
+ * A table cell renderer that takes a java.text.Format object to format
+ * the values for display on the screen.
+ * 
  * @author HanTunca
  * Dec 5, 2019
  *
